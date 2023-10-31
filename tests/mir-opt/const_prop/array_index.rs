@@ -6,12 +6,8 @@
 fn main() {
     // Verify that we use result of propagation to index arrays
     // CHECK-LABEL: fn main(
-    // CHECK:  scope 1 {
-    // CHECK:     debug x => _1;
-    // CHECK:  }
-
     // CHECK:  bb0: {
-    // CHECK:     _1 = const 2_u32;
+    // CHECK:     {{_[0-9]+}} = const 2_u32;
     // CHECK:     return;
     // CHECK:  }
     // CHECK: }

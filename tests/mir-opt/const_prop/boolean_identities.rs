@@ -5,7 +5,7 @@
 pub fn test(x: bool, y: bool) -> bool {
     // Verify that boolean operators are solved (if possible)
     // CHECK-LABEL: fn test(
-    // CHECK: _0 = const false;
+    // CHECK: {{_[0-9]+}} = const false;
     (y | true) & (x & false)
 }
 

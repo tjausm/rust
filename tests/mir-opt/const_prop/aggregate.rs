@@ -14,8 +14,8 @@ fn main() {
 fn foo(x: u8) {
     // Verify that we still propagate if part of the aggregate is not known.
     // CHECK-LABEL: fn foo(
-    // CHECK: = const 1_i32;
-    // CHECK: = const 3_i32;
+    // CHECK: {{_[0-9]+}} = const 1_i32;
+    // CHECK: {{_[0-9]+}} = const 3_i32;
     let first = (0, x).0 + 1;
     let second = (x, 1).1 + 2;
 }

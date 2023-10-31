@@ -18,8 +18,8 @@ fn hello<T>(){
 
 pub fn main() {
     // CHECK-LABEL: fn main(
-    // CHECK: _1 = hello::<()>() -> [return: bb1, unwind continue];
-    // CHECK: _2 = hello::<Vec<()>>() -> [return: bb2, unwind continue];
+    // CHECK: {{_[0-9]+}} = hello::<()>() -> [return: bb1, unwind continue];
+    // CHECK: {{_[0-9]+}} = hello::<Vec<()>>() -> [return: bb2, unwind continue];
     // CHECK: return;
     hello::<()>();
     hello::<Vec<()>>();

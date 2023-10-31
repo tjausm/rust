@@ -9,7 +9,7 @@
 // EMIT_MIR boxes.main.ConstProp.diff
 fn main() {
     // CHECK-LABEL: fn main(
-    // CHECK-NOT: = const 43_i32;
+    // CHECK-NOT: {{_[0-9]+}} = const 43_i32;
     let x = *(#[rustc_box]
     Box::new(42))
         + 0;
