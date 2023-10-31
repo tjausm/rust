@@ -4,6 +4,7 @@
 
 // EMIT_MIR mutable_variable_aggregate_partial_read.main.ConstProp.diff
 fn main() {
+    // example for not propagating constants of partially initialized variables
     let mut x: (i32, i32) = foo();
     x.1 = 99;
     x.0 = 42;
