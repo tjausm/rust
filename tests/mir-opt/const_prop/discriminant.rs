@@ -1,4 +1,3 @@
-// skip-filecheck
 // unit-test: ConstProp
 // compile-flags: -O
 
@@ -10,5 +9,7 @@
 // EMIT_MIR_FOR_EACH_BIT_WIDTH
 // EMIT_MIR discriminant.main.ConstProp.diff
 fn main() {
+    // CHECK-LABEL: fn main(
+    // CHECK-NOT: goto
     let x = (if let Some(true) = Some(true) { 42 } else { 10 }) + 0;
 }

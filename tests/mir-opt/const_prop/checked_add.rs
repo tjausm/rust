@@ -6,6 +6,6 @@
 fn main() {
     // CHECK-LABEL: fn main(
     // CHECK: {{_[0-9]+}} = const 2_u32;
-    // CHECK-NOT: {{_[0-9]+}} = CheckedAdd(_1, const 1_u32);
+    // CHECK-NOT: {{_[0-9]+}} = CheckedAdd({{_[0-9]+}} , const 1_u32);
     let x: u32 = 1 + 1;
 }
